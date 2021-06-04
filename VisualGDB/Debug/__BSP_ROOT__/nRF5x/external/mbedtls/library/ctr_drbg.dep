@@ -1,0 +1,92 @@
+VisualGDB/Debug/__BSP_ROOT__/nRF5x/external/mbedtls/library/ctr_drbg.o: \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/library/ctr_drbg.c \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/nrf_tls/mbedtls/nrf_crypto/config/nrf_crypto_mbedtls_config.h \
+ pca10056/s140/config/sdk_config.h \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/check_config.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include-fixed\limits.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include-fixed\syslimits.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\limits.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\newlib.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\_newlib_version.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\cdefs.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\_default_types.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\features.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include\stddef.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\syslimits.h \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/ctr_drbg.h \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/aes.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include\stdint.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\stdint.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_intsup.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_stdint.h \
+ C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/platform_util.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\string.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\_ansi.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\config.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\ieeefp.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\reent.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\_ansi.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_types.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\_types.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\lock.h \
+ c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\string.h
+
+C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/nrf_tls/mbedtls/nrf_crypto/config/nrf_crypto_mbedtls_config.h:
+
+pca10056/s140/config/sdk_config.h:
+
+C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/check_config.h:
+
+c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include-fixed\limits.h:
+
+c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include-fixed\syslimits.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\limits.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\newlib.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\_newlib_version.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\cdefs.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\_default_types.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\features.h:
+
+c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include\stddef.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\syslimits.h:
+
+C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/ctr_drbg.h:
+
+C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/aes.h:
+
+c:\sysgcc\arm-eabi\lib\gcc\arm-none-eabi\9.3.1\include\stdint.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\stdint.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_intsup.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_stdint.h:
+
+C:/Users/regagnon/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.nordic.nrf5x/nRF5x/external/mbedtls/include/mbedtls/platform_util.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\string.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\_ansi.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\config.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\ieeefp.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\reent.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\_ansi.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\_types.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\machine\_types.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\lock.h:
+
+c:\sysgcc\arm-eabi\arm-none-eabi\include\sys\string.h:

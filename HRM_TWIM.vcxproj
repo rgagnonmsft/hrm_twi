@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{165322C9-72E9-4637-B941-0BB27944FC50}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.nordic.nrf5x</BSP_ID>
+    <BSP_VERSION>17.0</BSP_VERSION>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>9.3.1/9.2.0/r2</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)nrf5x.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>9.3.1/9.2.0/r2</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)nrf5x.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <CLanguageStandard>C99</CLanguageStandard>
+      <AdditionalIncludeDirectories>$(BSP_ROOT)/nRF5x/components/nfc/ndef/generic/message;$(BSP_ROOT)/nRF5x/components/nfc/t2t_lib;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/hl_detection_procedure;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ancs_c;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ias_c;$(BSP_ROOT)/nRF5x/components/libraries/pwm;$(BSP_ROOT)/nRF5x/external/nrf_oberon/include;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/cdc/acm;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/generic;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/msc;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid;$(BSP_ROOT)/nRF5x/modules/nrfx/hal;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/le_oob_rec_parser;$(BSP_ROOT)/nRF5x/components/libraries/log;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_gls;$(BSP_ROOT)/nRF5x/components/libraries/fstorage;$(BSP_ROOT)/nRF5x/components/nfc/ndef/text;$(BSP_ROOT)/nRF5x/components/libraries/mutex;$(BSP_ROOT)/nRF5x/components/libraries/gpiote;$(BSP_ROOT)/nRF5x/components/libraries/bootloader/ble_dfu;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/common;$(BSP_ROOT)/nRF5x/components/boards;$(BSP_ROOT)/nRF5x/components/nfc/ndef/generic/record;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/cc_file;$(BSP_ROOT)/nRF5x/components/ble/ble_advertising;$(BSP_ROOT)/nRF5x/external/utf_converter;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_bas_c;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/micro_ecc;$(BSP_ROOT)/nRF5x/modules/nrfx/drivers/include;$(BSP_ROOT)/nRF5x/components/libraries/experimental_task_manager;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hrs_c;$(BSP_ROOT)/nRF5x/components/softdevice/s140/headers/nrf52;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/le_oob_rec;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/oberon;$(BSP_ROOT)/nRF5x/components/libraries/queue;$(BSP_ROOT)/nRF5x/components/libraries/pwr_mgmt;$(BSP_ROOT)/nRF5x/components/ble/ble_dtm;$(BSP_ROOT)/nRF5x/components/toolchain/cmsis/include;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_rscs_c;$(BSP_ROOT)/nRF5x/components/ble/common;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lls;$(BSP_ROOT)/nRF5x/components/nfc/platform;$(BSP_ROOT)/nRF5x/components/libraries/bsp;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/nrf_hw;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ac_rec;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_bas;$(BSP_ROOT)/nRF5x/components/libraries/mpu;$(BSP_ROOT)/nRF5x/components/libraries/experimental_section_vars;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ans_c;$(BSP_ROOT)/nRF5x/components/libraries/slip;$(BSP_ROOT)/nRF5x/components/libraries/delay;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/cdc;$(BSP_ROOT)/nRF5x/components/libraries/memobj;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cc310_bl;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_nus_c;$(BSP_ROOT)/nRF5x/components/softdevice/common;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ias;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/mouse;$(BSP_ROOT)/nRF5x/components/libraries/low_power_pwm;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/ble_oob_advdata_parser;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_dfu;$(BSP_ROOT)/nRF5x/external/fprintf;$(BSP_ROOT)/nRF5x/components/libraries/svc;$(BSP_ROOT)/nRF5x/components/libraries/atomic;$(BSP_ROOT)/VendorSamples/components;$(BSP_ROOT)/nRF5x/external/nrf_cc310/include;$(BSP_ROOT)/nRF5x/components/libraries/scheduler;$(BSP_ROOT)/nRF5x/components/libraries/cli;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lbs;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hts;$(BSP_ROOT)/nRF5x/components/libraries/crc16;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/apdu;$(BSP_ROOT)/nRF5x/components/libraries/util;pca10056/s140/config;$(BSP_ROOT)/nRF5x/components/libraries/csense_drv;$(BSP_ROOT)/nRF5x/components/libraries/csense;$(BSP_ROOT)/nRF5x/components/libraries/balloc;$(BSP_ROOT)/nRF5x/components/libraries/ecc;$(BSP_ROOT)/nRF5x/components/libraries/hardfault;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_cscs;$(BSP_ROOT)/nRF5x/components/libraries/hci;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/kbd;$(BSP_ROOT)/nRF5x/components/libraries/timer;$(BSP_ROOT)/nRF5x/components/softdevice/s140/headers;$(BSP_ROOT)/nRF5x/integration/nrfx;$(BSP_ROOT)/nRF5x/components/libraries/stack_info;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/tlv;$(BSP_ROOT)/nRF5x/components/libraries/sortlist;$(BSP_ROOT)/nRF5x/components/libraries/spi_mngr;$(BSP_ROOT)/nRF5x/components/libraries/led_softblink;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser;$(BSP_ROOT)/nRF5x/components/libraries/sdcard;$(BSP_ROOT)/nRF5x/components/nfc/t4t_lib;$(BSP_ROOT)/nRF5x/components/nfc/ndef/parser/record;$(BSP_ROOT)/nRF5x/modules/nrfx/mdk;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_cts_c;$(BSP_ROOT)/nRF5x/external/nrf_tls/mbedtls/nrf_crypto/config;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_nus;$(BSP_ROOT)/nRF5x/components/libraries/twi_mngr;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hids;$(BSP_ROOT)/nRF5x/components/libraries/strerror;$(BSP_ROOT)/nRF5x/components/libraries/crc32;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_oob_advdata;$(BSP_ROOT)/nRF5x/components/nfc/t2t_parser;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_pair_msg;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/optiga;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/audio;$(BSP_ROOT)/nRF5x/components/libraries/sensorsim;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/nrf_sw;$(BSP_ROOT)/nRF5x/components/ble/peer_manager;$(BSP_ROOT)/nRF5x/components/libraries/mem_manager;$(BSP_ROOT)/nRF5x/components/libraries/ringbuf;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_tps;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_rscs;$(BSP_ROOT)/nRF5x/components/nfc/ndef/parser/message;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/mbedtls;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cc310;$(BSP_ROOT)/nRF5x/external/nrf_oberon;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_dis;$(BSP_ROOT)/nRF5x/components/nfc/ndef/uri;$(BSP_ROOT)/nRF5x/components/ble/nrf_ble_gatt;$(BSP_ROOT)/nRF5x/components/ble/nrf_ble_qwr;$(BSP_ROOT)/nRF5x/components/libraries/gfx;$(BSP_ROOT)/nRF5x/components/libraries/button;$(BSP_ROOT)/nRF5x/modules/nrfx;$(BSP_ROOT)/nRF5x/components/libraries/twi_sensor;$(BSP_ROOT)/nRF5x/integration/nrfx/legacy;$(BSP_ROOT)/nRF5x/components/libraries/usbd;$(BSP_ROOT)/nRF5x/external/mbedtls/include;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ep_oob_rec;$(BSP_ROOT)/nRF5x/external/segger_rtt;$(BSP_ROOT)/nRF5x/components/libraries/atomic_fifo;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lbs_c;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_pair_lib;$(BSP_ROOT)/nRF5x/components/libraries/crypto;$(BSP_ROOT)/nRF5x/components/ble/ble_racp;$(BSP_ROOT)/nRF5x/components/libraries/fds;$(BSP_ROOT)/nRF5x/components/nfc/ndef/launchapp;$(BSP_ROOT)/nRF5x/components/libraries/atomic_flags;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hrs;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cifra;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/hs_rec;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/ac_rec_parser;$(BSP_ROOT)/nRF5x/components/libraries/stack_guard;$(BSP_ROOT)/nRF5x/components/libraries/log/src;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);DEBUG=1;APP_TIMER_V2;APP_TIMER_V2_RTC1_ENABLED;BLE_STACK_SUPPORT_REQD;BOARD_PCA10056;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;NRF52840_XXAA;NRF_CRYPTO_MAX_INSTANCE_COUNT=1;NRF_SD_BLE_API_VERSION=7;S140;SOFTDEVICE_PRESENT;MBEDTLS_CONFIG_FILE="nrf_crypto_mbedtls_config.h"</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LinkerScript>pca10056_s140.ld</LinkerScript>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <CLanguageStandard>C99</CLanguageStandard>
+      <AdditionalIncludeDirectories>$(BSP_ROOT)/nRF5x/components/nfc/ndef/generic/message;$(BSP_ROOT)/nRF5x/components/nfc/t2t_lib;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/hl_detection_procedure;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ancs_c;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ias_c;$(BSP_ROOT)/nRF5x/components/libraries/pwm;$(BSP_ROOT)/nRF5x/external/nrf_oberon/include;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/cdc/acm;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/generic;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/msc;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid;$(BSP_ROOT)/nRF5x/modules/nrfx/hal;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/le_oob_rec_parser;$(BSP_ROOT)/nRF5x/components/libraries/log;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_gls;$(BSP_ROOT)/nRF5x/components/libraries/fstorage;$(BSP_ROOT)/nRF5x/components/nfc/ndef/text;$(BSP_ROOT)/nRF5x/components/libraries/mutex;$(BSP_ROOT)/nRF5x/components/libraries/gpiote;$(BSP_ROOT)/nRF5x/components/libraries/bootloader/ble_dfu;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/common;$(BSP_ROOT)/nRF5x/components/boards;$(BSP_ROOT)/nRF5x/components/nfc/ndef/generic/record;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/cc_file;$(BSP_ROOT)/nRF5x/components/ble/ble_advertising;$(BSP_ROOT)/nRF5x/external/utf_converter;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_bas_c;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/micro_ecc;$(BSP_ROOT)/nRF5x/modules/nrfx/drivers/include;$(BSP_ROOT)/nRF5x/components/libraries/experimental_task_manager;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hrs_c;$(BSP_ROOT)/nRF5x/components/softdevice/s140/headers/nrf52;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/le_oob_rec;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/oberon;$(BSP_ROOT)/nRF5x/components/libraries/queue;$(BSP_ROOT)/nRF5x/components/libraries/pwr_mgmt;$(BSP_ROOT)/nRF5x/components/ble/ble_dtm;$(BSP_ROOT)/nRF5x/components/toolchain/cmsis/include;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_rscs_c;$(BSP_ROOT)/nRF5x/components/ble/common;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lls;$(BSP_ROOT)/nRF5x/components/nfc/platform;$(BSP_ROOT)/nRF5x/components/libraries/bsp;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/nrf_hw;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ac_rec;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_bas;$(BSP_ROOT)/nRF5x/components/libraries/mpu;$(BSP_ROOT)/nRF5x/components/libraries/experimental_section_vars;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ans_c;$(BSP_ROOT)/nRF5x/components/libraries/slip;$(BSP_ROOT)/nRF5x/components/libraries/delay;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/cdc;$(BSP_ROOT)/nRF5x/components/libraries/memobj;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cc310_bl;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_nus_c;$(BSP_ROOT)/nRF5x/components/softdevice/common;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_ias;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/mouse;$(BSP_ROOT)/nRF5x/components/libraries/low_power_pwm;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/ble_oob_advdata_parser;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_dfu;$(BSP_ROOT)/nRF5x/external/fprintf;$(BSP_ROOT)/nRF5x/components/libraries/svc;$(BSP_ROOT)/nRF5x/components/libraries/atomic;$(BSP_ROOT)/VendorSamples/components;$(BSP_ROOT)/nRF5x/external/nrf_cc310/include;$(BSP_ROOT)/nRF5x/components/libraries/scheduler;$(BSP_ROOT)/nRF5x/components/libraries/cli;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lbs;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hts;$(BSP_ROOT)/nRF5x/components/libraries/crc16;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/apdu;$(BSP_ROOT)/nRF5x/components/libraries/util;pca10056/s140/config;$(BSP_ROOT)/nRF5x/components/libraries/csense_drv;$(BSP_ROOT)/nRF5x/components/libraries/csense;$(BSP_ROOT)/nRF5x/components/libraries/balloc;$(BSP_ROOT)/nRF5x/components/libraries/ecc;$(BSP_ROOT)/nRF5x/components/libraries/hardfault;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_cscs;$(BSP_ROOT)/nRF5x/components/libraries/hci;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/hid/kbd;$(BSP_ROOT)/nRF5x/components/libraries/timer;$(BSP_ROOT)/nRF5x/components/softdevice/s140/headers;$(BSP_ROOT)/nRF5x/integration/nrfx;$(BSP_ROOT)/nRF5x/components/libraries/stack_info;$(BSP_ROOT)/nRF5x/components/nfc/t4t_parser/tlv;$(BSP_ROOT)/nRF5x/components/libraries/sortlist;$(BSP_ROOT)/nRF5x/components/libraries/spi_mngr;$(BSP_ROOT)/nRF5x/components/libraries/led_softblink;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser;$(BSP_ROOT)/nRF5x/components/libraries/sdcard;$(BSP_ROOT)/nRF5x/components/nfc/t4t_lib;$(BSP_ROOT)/nRF5x/components/nfc/ndef/parser/record;$(BSP_ROOT)/nRF5x/modules/nrfx/mdk;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_cts_c;$(BSP_ROOT)/nRF5x/external/nrf_tls/mbedtls/nrf_crypto/config;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_nus;$(BSP_ROOT)/nRF5x/components/libraries/twi_mngr;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hids;$(BSP_ROOT)/nRF5x/components/libraries/strerror;$(BSP_ROOT)/nRF5x/components/libraries/crc32;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_oob_advdata;$(BSP_ROOT)/nRF5x/components/nfc/t2t_parser;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_pair_msg;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/optiga;$(BSP_ROOT)/nRF5x/components/libraries/usbd/class/audio;$(BSP_ROOT)/nRF5x/components/libraries/sensorsim;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/nrf_sw;$(BSP_ROOT)/nRF5x/components/ble/peer_manager;$(BSP_ROOT)/nRF5x/components/libraries/mem_manager;$(BSP_ROOT)/nRF5x/components/libraries/ringbuf;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_tps;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_rscs;$(BSP_ROOT)/nRF5x/components/nfc/ndef/parser/message;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/mbedtls;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cc310;$(BSP_ROOT)/nRF5x/external/nrf_oberon;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_dis;$(BSP_ROOT)/nRF5x/components/nfc/ndef/uri;$(BSP_ROOT)/nRF5x/components/ble/nrf_ble_gatt;$(BSP_ROOT)/nRF5x/components/ble/nrf_ble_qwr;$(BSP_ROOT)/nRF5x/components/libraries/gfx;$(BSP_ROOT)/nRF5x/components/libraries/button;$(BSP_ROOT)/nRF5x/modules/nrfx;$(BSP_ROOT)/nRF5x/components/libraries/twi_sensor;$(BSP_ROOT)/nRF5x/integration/nrfx/legacy;$(BSP_ROOT)/nRF5x/components/libraries/usbd;$(BSP_ROOT)/nRF5x/external/mbedtls/include;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ep_oob_rec;$(BSP_ROOT)/nRF5x/external/segger_rtt;$(BSP_ROOT)/nRF5x/components/libraries/atomic_fifo;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_lbs_c;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/ble_pair_lib;$(BSP_ROOT)/nRF5x/components/libraries/crypto;$(BSP_ROOT)/nRF5x/components/ble/ble_racp;$(BSP_ROOT)/nRF5x/components/libraries/fds;$(BSP_ROOT)/nRF5x/components/nfc/ndef/launchapp;$(BSP_ROOT)/nRF5x/components/libraries/atomic_flags;$(BSP_ROOT)/nRF5x/components/ble/ble_services/ble_hrs;$(BSP_ROOT)/nRF5x/components/libraries/crypto/backend/cifra;$(BSP_ROOT)/nRF5x/components/nfc/ndef/connection_handover/hs_rec;$(BSP_ROOT)/nRF5x/components/nfc/ndef/conn_hand_parser/ac_rec_parser;$(BSP_ROOT)/nRF5x/components/libraries/stack_guard;$(BSP_ROOT)/nRF5x/components/libraries/log/src;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);NDEBUG=1;RELEASE=1;APP_TIMER_V2;APP_TIMER_V2_RTC1_ENABLED;BLE_STACK_SUPPORT_REQD;BOARD_PCA10056;CONFIG_GPIO_AS_PINRESET;FLOAT_ABI_HARD;NRF52840_XXAA;NRF_CRYPTO_MAX_INSTANCE_COUNT=1;NRF_SD_BLE_API_VERSION=7;S140;SOFTDEVICE_PRESENT;MBEDTLS_CONFIG_FILE="nrf_crypto_mbedtls_config.h"</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LinkerScript>pca10056_s140.ld</LinkerScript>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\integration\nrfx\legacy\nrf_drv_twi.c" />
+    <ClCompile Include="..\..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\modules\nrfx\drivers\src\nrfx_twi.c" />
+    <ClCompile Include="..\..\..\..\..\..\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.nordic.nrf5x\nRF5x\modules\nrfx\drivers\src\nrfx_twim.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\bsp\bsp.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\bsp\bsp_btn_ble.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\nrf_hw\nrf_hw_backend_init.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\nrf_hw\nrf_hw_backend_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\nrf_hw\nrf_hw_backend_rng_mbedtls.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\boards\boards.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\integration\nrfx\legacy\nrf_drv_clock.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\integration\nrfx\legacy\nrf_drv_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\integration\nrfx\legacy\nrf_drv_uart.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\soc\nrfx_atomic.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\nrfx_clock.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\nrfx_gpiote.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\prs\nrfx_prs.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\nrfx_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\nrfx_uart.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\drivers\src\nrfx_uarte.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\button\app_button.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\util\app_error.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\util\app_error_handler_gcc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\util\app_error_weak.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\scheduler\app_scheduler.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\timer\app_timer2.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\util\app_util_platform.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crc16\crc16.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\timer\drv_rtc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\fds\fds.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\hardfault\hardfault_implementation.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\mem_manager\mem_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\util\nrf_assert.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\atomic_fifo\nrf_atfifo.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\atomic_flags\nrf_atflags.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\atomic\nrf_atomic.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\balloc\nrf_balloc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\fprintf\nrf_fprintf.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\fprintf\nrf_fprintf_format.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\fstorage\nrf_fstorage.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\fstorage\nrf_fstorage_sd.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\memobj\nrf_memobj.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\pwr_mgmt\nrf_pwr_mgmt.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\queue\nrf_queue.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\ringbuf\nrf_ringbuf.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\experimental_section_vars\nrf_section_iter.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\sortlist\nrf_sortlist.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\strerror\nrf_strerror.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\sensorsim\sensorsim.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_backend_rtt.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_backend_serial.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_backend_uart.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_default_backends.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_frontend.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\log\src\nrf_log_str_formatter.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_aead.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_aes.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_aes_shared.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_ecc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_ecdh.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_ecdsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_eddsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_error.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_hash.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_hkdf.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_hmac.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_init.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\nrf_crypto_shared.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\softdevice\common\nrf_sdh.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\softdevice\common\nrf_sdh_ble.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\softdevice\common\nrf_sdh_soc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\mbedtls\library\aes.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\mbedtls\library\ctr_drbg.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\mbedtls\library\platform_util.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\auth_status_tracker.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\common\ble_advdata.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\ble_advertising\ble_advertising.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\common\ble_conn_params.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\common\ble_conn_state.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\common\ble_srv_common.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\gatt_cache_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\gatts_cache_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\id_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\nrf_ble_gatt\nrf_ble_gatt.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\nrf_ble_lesc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\nrf_ble_qwr\nrf_ble_qwr.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\peer_data_storage.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\peer_database.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\peer_id.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\peer_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\peer_manager_handler.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\pm_buffer.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\security_dispatcher.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\peer_manager\security_manager.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_aes.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_aes_aead.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_chacha_poly_aead.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_ecc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_ecdh.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_ecdsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_eddsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_hash.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_hmac.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_init.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_mutex.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_rng.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\cc310\cc310_backend_shared.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\utf_converter\utf.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\ble_services\ble_bas\ble_bas.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\ble_services\ble_dis\ble_dis.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\ble\ble_services\ble_hrs\ble_hrs.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\segger_rtt\SEGGER_RTT.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\segger_rtt\SEGGER_RTT_Syscalls_GCC.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\external\segger_rtt\SEGGER_RTT_printf.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_chacha_poly_aead.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_ecc.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_ecdh.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_ecdsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_eddsa.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_hash.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\components\libraries\crypto\backend\oberon\oberon_backend_hmac.c" />
+    <Library Include="$(BSP_ROOT)\nRF5x\external\nrf_cc310\lib\cortex-m4\hard-float\libnrf_cc310_0.9.13.a" />
+    <Library Include="$(BSP_ROOT)\nRF5x\external\nrf_oberon\lib\cortex-m4\hard-float\liboberon_3.0.6.a" />
+    <None Include="nrf5x.props" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\mdk\system_nrf52840.c" />
+    <ClCompile Include="$(BSP_ROOT)\nRF5x\modules\nrfx\mdk\gcc_startup_nrf52840.S" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\dsp\Include\arm_common_tables.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\dsp\Include\arm_const_structs.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\dsp\Include\arm_math.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_armcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_armclang.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_armclang_ltm.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_compiler.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_gcc.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_iccarm.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\cmsis_version.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_armv81mml.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_armv8mbl.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_armv8mml.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm0.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm0plus.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm1.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm23.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm3.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm33.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm35p.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm4.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_cm7.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_sc000.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\core_sc300.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\mpu_armv7.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\mpu_armv8.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\components\toolchain\cmsis\include\tz_context.h" />
+    <ClInclude Include="$(BSP_ROOT)\nRF5x\modules\nrfx\mdk\system_nrf52840.h" />
+    <None Include="HRM_TWIM-Debug.vgdbsettings" />
+    <None Include="HRM_TWIM-Release.vgdbsettings" />
+    <None Include="nrf5x.xml" />
+  </ItemGroup>
+</Project>
