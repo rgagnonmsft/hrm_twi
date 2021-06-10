@@ -98,6 +98,14 @@
 #define LM75B_REG_THYST     0x02U
 #define LM75B_REG_TOS       0x03U
 #define LIS3DH_WHO_AM_I     0x0FU
+#define LIS3DH_OUT_X_L      0x28U
+#define LIS3DH_OUT_X_H      0x29U
+#define LIS3DH_OUT_Y_L      0x2AU
+#define LIS3DH_OUT_Y_H      0x2BU
+#define LIS3DH_OUT_Z_L      0x2CU
+#define LIS3DH_OUT_Z_H      0x2DU
+#define LIS3DH_CTRL_REG4    0x23U
+#define LIS3DH_CTRL_REG1    0x20U
 
 /* Mode for LM75B. */
 #define NORMAL_MODE 0U
@@ -112,7 +120,7 @@ static const nrf_drv_twi_t m_twi = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
 static uint8_t m_sample;
 
 
-#define DEVICE_NAME                         "Nordic_HRM"                            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                         "Smart Jersey Accel"                            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                   "NordicSemiconductor"                   /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                    300                                     /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
 
@@ -314,12 +322,14 @@ static void heart_rate_meas_timeout_handler(void * p_context)
 
     UNUSED_PARAMETER(p_context);
 
+	
     heart_rate = (uint16_t)sensorsim_measure(&m_heart_rate_sim_state, &m_heart_rate_sim_cfg);
 
 	LIS3DH_read_one_byte();
-	
+	uint16_t heart_rate_cast = (uint16_t)m_sample;
+	NRF_LOG_INFO("in timeout hander: %d %d", heart_rate_cast, m_sample);
     cnt++;
-	err_code = ble_hrs_heart_rate_measurement_send(&m_hrs, (uint16_t)m_sample); //heart_rate);
+	err_code = ble_hrs_heart_rate_measurement_send(&m_hrs, heart_rate_cast); //heart_rate);
     if ((err_code != NRF_SUCCESS) &&
         (err_code != NRF_ERROR_INVALID_STATE) &&
         (err_code != NRF_ERROR_RESOURCES) &&
@@ -976,10 +986,10 @@ void LM75B_set_mode(void)
 	/* Writing to LM75B_REG_CONF "0" set temperature sensor in NORMAL mode. */
 	uint8_t reg[2] = { LM75B_REG_CONF, NORMAL_MODE };
 	err_code = nrf_drv_twi_tx(&m_twi, LM75B_ADDR, reg, sizeof(reg), false);
-	NRF_LOG_INFO("before inf loop %d", LM75B_ADDR);
+	//NRF_LOG_INFO("before inf loop %d", LM75B_ADDR);
 	APP_ERROR_CHECK(err_code);
 	while (m_xfer_done == false) ;
-	NRF_LOG_INFO("after inf loop");
+	//NRF_LOG_INFO("after inf loop");
 
 	/* Writing to pointer byte. */
 	reg[0] = LM75B_REG_TEMP;
@@ -991,7 +1001,7 @@ void LM75B_set_mode(void)
 
 int count = 0;
 ret_code_t err_code_readbyte;
-uint8_t reg_readbyte[2] = { LIS3DH_WHO_AM_I };
+uint8_t reg_readbyte[1] = { LIS3DH_OUT_Z_L };
 
 void LIS3DH_read_one_byte()
 {
@@ -1009,17 +1019,23 @@ void LIS3DH_read_one_byte()
 		
 	}
 	
-	//__WFE();
+}
 
-	//while (m_xfer_done == false) {
-	//	NRF_LOG_INFO("%d", err_code);
-	//}
+uint8_t reg_set_mode[2] = { LIS3DH_CTRL_REG1, 0xE4U }; //0xE4 puts it in 50Hz, high-res/normal mode with all axes enabled
+
+void LIS3DH_set_mode(void)
+{
+	m_xfer_done = false;
+	err_code_readbyte = nrf_drv_twi_tx(&m_twi, LM75B_ADDR, reg_set_mode, 2, false);
+	while (!m_xfer_done) ;
+	//m_xfer_done = false;
+	//err_code_readbyte = nrf_drv_twi_tx(&m_twi, LM75B_ADDR, &m_sample, sizeof(m_sample));
+	//while (!m_xfer_done) ;
+	if (err_code_readbyte == NRFX_SUCCESS)
+	{
+		NRF_LOG_INFO("%d", m_sample);
 		
-	
-	//while (m_xfer_done == false) ;
-	//if(err_code == NRFX_SUCCESS) {
-	
-	//}
+	}
 }
 
 /**
@@ -1135,8 +1151,8 @@ int main(void)
     peer_manager_init();
 
 	twi_init();
-	LM75B_set_mode();
-	
+	//LM75B_set_mode();
+	LIS3DH_set_mode();
 	
     // Start execution.
     NRF_LOG_INFO("Heart Rate Sensor example started.");
