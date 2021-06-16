@@ -1130,6 +1130,21 @@ static void idle_state_handle(void)
 }
 
 
+void SmartJerseyGPIOInit(void)
+{
+#ifdef SMART_JERSEY_REV_E
+	nrf_gpio_cfg_output(LED_BLUE);
+	nrf_gpio_pin_clear(LED_BLUE);
+	
+	nrf_gpio_cfg_output(EN_5P0);
+	nrf_gpio_pin_set(EN_5P0);
+	
+	nrf_gpio_cfg_output(BADGE_PWR_ENABLEn);
+	nrf_gpio_pin_set(BADGE_PWR_ENABLEn);
+#endif
+	
+}
+
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -1153,6 +1168,7 @@ int main(void)
 	twi_init();
 	//LM75B_set_mode();
 	LIS3DH_set_mode();
+	SmartJerseyGPIOInit();
 	
     // Start execution.
     NRF_LOG_INFO("Heart Rate Sensor example started.");
