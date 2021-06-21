@@ -91,7 +91,7 @@
 #define TWI_INSTANCE_ID     0
 
 /* Common addresses definition for temperature sensor. */
-#define LM75B_ADDR          0x19// for SA0 tied to 1 on LIS3DH eval board //orig: (0x90U >> 1)
+#define LM75B_ADDR          0x18 //0x19 for LIS3DH eval// for SA0 tied to 1 on LIS3DH eval board //orig: (0x90U >> 1)
 
 #define LM75B_REG_TEMP      0x00U
 #define LM75B_REG_CONF      0x01U
@@ -1136,11 +1136,11 @@ void SmartJerseyGPIOInit(void)
 	nrf_gpio_cfg_output(LED_BLUE);
 	nrf_gpio_pin_clear(LED_BLUE);
 	
-	nrf_gpio_cfg_output(EN_5P0);
-	nrf_gpio_pin_set(EN_5P0);
+	//nrf_gpio_cfg_output(EN_5P0);
+	//nrf_gpio_pin_set(EN_5P0);
 	
-	nrf_gpio_cfg_output(BADGE_PWR_ENABLEn);
-	nrf_gpio_pin_set(BADGE_PWR_ENABLEn);
+	//nrf_gpio_cfg_output(BADGE_PWR_ENABLEn);
+	//nrf_gpio_pin_set(BADGE_PWR_ENABLEn);
 #endif
 	
 }
@@ -1167,8 +1167,9 @@ int main(void)
 
 	twi_init();
 	//LM75B_set_mode();
-	LIS3DH_set_mode();
 	SmartJerseyGPIOInit();
+	LIS3DH_set_mode();
+
 	
     // Start execution.
     NRF_LOG_INFO("Heart Rate Sensor example started.");
